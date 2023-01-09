@@ -1,0 +1,60 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-family: $font;
+    font-size: 1.2rem;
+    color: #7e7e7e !important;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 120%;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 992px) {
+        display: block
+    }
+
+    .search {
+        padding: 0 !important;
+        display: inline-block;
+    }
+
+    a,
+    span {
+        font-family: $font;
+        font-size: 1.2rem;
+        color: #7e7e7e !important;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 120%;
+        @include link;
+
+        br {
+            display: none
+        }
+    }
+
+    a:hover {
+        span {
+            color: $red !important;
+        }
+    }
+
+    .separator {
+        display: inline-block;
+        background: url('../icons/icon-breadcrumb-separator.svg') top left no-repeat;
+        width: .7rem;
+        height: 1.1rem;
+        margin: 0 .9rem;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: 992px) {
+            display: block
+        }
+    }
+}

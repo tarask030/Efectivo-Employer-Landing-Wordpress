@@ -1,0 +1,157 @@
+.btn-base {
+    display: inline-flex;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: right;
+    color: $btn-base;
+    @include color;
+    padding-right: 3rem;
+    line-height: 120%;
+
+    &:after {
+        @include abs-block;
+        top: .3rem;
+        right: 0;
+        width: 1.7rem;
+        height: 1.4rem;
+        background: url('../icons/arrow-right.svg') top left no-repeat;
+        content: '';
+        @include link;
+    }
+
+    &:hover {
+        color: $purple;
+
+        &:after {
+            right: -.5rem;
+        }
+    }
+
+    img {
+        margin-left: 1.5rem;
+        @include link;
+    }
+}
+
+.btn-purple {
+    background: $purple;
+    height: 6rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 3.6rem;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: .4rem;
+    border: 0;
+    box-shadow: none;
+    @include bg;
+    cursor: pointer;
+
+    &:hover {
+        background: $txt;
+        color: $white;
+    }
+}
+
+
+.btn-white {
+    background: $txt;
+    border: .1rem solid $white;
+    height: 6rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 3.6rem;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: .4rem;
+    box-shadow: none;
+    @include bg;
+    cursor: pointer;
+
+    &:hover {
+        background: $purple;
+        color: $white;
+    }
+}
+
+
+.team-btn {
+    background: $white;
+    box-shadow: none;
+    border: 0;
+    @include link;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+        margin-right: 1rem;
+    }
+
+    span {
+        color: $purple;
+        font-family: $font;
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 120%;
+        text-align: left;
+        @include color;
+        display: inline-block;
+        align-items: center;
+
+        &:after {
+            display: block;
+            content: '';
+            position: relative;
+            width: 100%;
+            height: .1rem;
+            margin-top: 0rem;
+            transform: scaleX(0);
+            background-color: $purple;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+    }
+
+    &:hover {
+        span {
+            &:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+}
+
+
+.btn-top {
+    @include abs-block;
+    top: -3rem;
+    right: 4rem;
+    width: 6rem;
+    height: 6rem;
+    background: $purple;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    @include link;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(0px, -.8rem);
+    }
+
+    @include fullHD {
+        width: 7.6rem;
+        height: 7.6rem;
+        top: -3.8rem;
+    }
+}

@@ -1,0 +1,188 @@
+.grand {
+    @include rel-block;
+
+    &:before {
+        @include abs-block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: $btn-base url(../svg/grand-bg.svg) top left no-repeat;
+        z-index: -1;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hover {
+        @include link;
+        cursor: pointer;
+
+        &:hover {
+            fill: $purple
+        }
+    }
+
+    h3 {
+        font-size: 40px;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 110%;
+        color: $white;
+        margin-bottom: 2rem;
+        @include link;
+
+        @include fullHD {
+            font-size: 46px;
+        }
+    }
+
+    p {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 130%;
+        @include link;
+    }
+
+    p,
+    h3 {
+        max-width: 36rem;
+        margin-right: 4rem;
+
+        @include fullHD {
+            margin-right: 7rem;
+        }
+    }
+
+    .btn-base {
+        color: $white;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .grand-col {
+        flex: 1;
+        padding: 11rem 0 13rem 0;
+
+        &-txt {
+            @include link;
+            transition-delay: 3s;
+        }
+
+        &:nth-child(1) {
+            flex: 0 0 38rem;
+            @include link;
+
+            @media (min-width: 1680px) {
+                flex: 0 0 42rem;
+            }
+        }
+
+        button {
+            background: transparent;
+            box-shadow: none;
+            outline: none;
+            border: 0;
+            opacity: 0;
+        }
+    }
+
+    .grand-apla {
+        background: #270724;
+        width: 100%;
+        max-width: 58.5rem;
+        display: flex;
+        padding: 0 3rem;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        @include link;
+
+        @include fullHD {
+            padding: 0 5rem;
+        }
+
+        .project {
+            display: none;
+            opacity: 0;
+            @include link;
+
+            h4 {
+                font-size: 3rem;
+                font-weight: 600;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 110%;
+                margin-bottom: 2rem;
+                color: $white;
+
+                @include fullHD {
+                    font-size: 3.6rem;
+                }
+            }
+
+            .cnt {
+                color: $white;
+                max-width: 100%;
+            }
+
+            .links {
+                @include rel-block;
+                margin-top: 6rem;
+
+                li {
+                    margin-bottom: 1rem;
+
+                    a {
+                        color: $white;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .show {
+        opacity: 1
+    }
+
+    .active {
+        display: block !important;
+        opacity: 1 !important;
+        @include link;
+    }
+
+    .small {
+        flex: 0 0 10% !important;
+
+        .grand-col-txt {
+            opacity: 0;
+            display: none;
+        }
+
+        button {
+            opacity: 1;
+        }
+    }
+
+    svg {
+        text {
+            font-size: 1.6rem;
+            font-family: $font;
+        }
+        #Dotacje {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    }
+}
